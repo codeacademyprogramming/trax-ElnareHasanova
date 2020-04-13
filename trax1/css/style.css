@@ -1468,6 +1468,13 @@ position: relative;
 #testimonial-slider .owl-stage-outer .owl-stage{
 margin-top: -30px;
 }
+#our-partners{
+  width: 100%;
+  padding: 7.5rem 0;
+}
+#our-partners .owl-stage-outer{
+  overflow: visible;
+}
 #testimonial-slider .owl-nav {
   width: 300px;
   display: inline-block;
@@ -1558,6 +1565,7 @@ a.testim-name{
 /* ----- Our Blog ----- */
 #blog{
   padding: 7.5rem 0;
+  background-color: #f6f7f8;
 }
 .news_item {
   background: #fff;
