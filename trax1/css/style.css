@@ -14,6 +14,9 @@ body{
 a, button{
   transition: ease all .3s;
 }
+body * {
+  transition: ease all 0.3s;
+}
 .loader {
   bottom: 0;
   height: 100%;
@@ -1196,19 +1199,6 @@ height: 630px;
       margin-bottom: 15px;
   }
 }
-
-@media (max-width: 576px) {
-  .price-toggle-wrapper .Pricing-toggle-button {
-      padding: 10px 30px;
-  }
-  .carousel-shop-detail .owl-nav button,
-  #carousel-gallery-detail .owl-nav button {
-      transform: translateX(0) !important;
-  }
-  #syncCarousel .owl-stage {
-      pointer-events: none;
-  }
-}
 /* ----- Pricing ends ----- */
 /*----- Gallery Portfolio -----*/
 #portfolio{
@@ -1468,13 +1458,6 @@ position: relative;
 #testimonial-slider .owl-stage-outer .owl-stage{
 margin-top: -30px;
 }
-#our-partners{
-  width: 100%;
-  padding: 7.5rem 0;
-}
-#our-partners .owl-stage-outer{
-  overflow: visible;
-}
 #testimonial-slider .owl-nav {
   width: 300px;
   display: inline-block;
@@ -1503,6 +1486,7 @@ margin-top: -30px;
     height: 180px;
     width: 180px;
     overflow: hidden;
+    border-radius: 50%;
 }
 .testi-box .testimonial-round h4{
   margin-top: 15px;
@@ -1521,6 +1505,17 @@ a.testim-name{
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
+}
+.testi-box .testimonial-round>img:hover{
+  transform: scale(1.2);
+  transition: all ease .3s;
+}
+#our-partners{
+  width: 100%;
+  padding: 7.5rem 0;
+}
+#our-partners .owl-stage-outer{
+  overflow: visible;
 }
 .top90 {
   margin-top: 90px;
@@ -1565,7 +1560,7 @@ a.testim-name{
 /* ----- Our Blog ----- */
 #blog{
   padding: 7.5rem 0;
-  background-color: #f6f7f8;
+  background-color: #F6F7F8;
 }
 .news_item {
   background: #fff;
@@ -1663,7 +1658,22 @@ ul.rounded li::before{
 }
 .news_item .blog-img{
   position: relative;
+  height: 224px;
   margin: 0 auto;
+}
+.news_item .blog-img img{
+  width: 100%;
+  height: 100%;
+}
+.news_item .blog-img .owl-carousel{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+.news_item .blog-img .image{
+  width: 100%;
+  height: 100%;
 }
 .owl-blog-item .owl-nav {
   position: absolute;
@@ -1750,6 +1760,9 @@ ul.rounded li::before{
 .form-group label,
 .checkbox label {
   position: relative;
+}
+.thanks{
+  display: none;
 }
 .contactus-wrapp {
   padding: 2.5rem 2rem;
@@ -1858,6 +1871,10 @@ textarea:-ms-input-placeholder {
   text-align: center;
   font-size: 18px;
   margin-right: 10px;
+}
+#map{
+  width: 100%;
+  height: 400px;
 }
 #map-container,
 #map-container>iframe {
@@ -2071,27 +2088,6 @@ ul.latest_news li a:focus+span.defaultcolor {
 
 /* Footer ends */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Back To Top*/
 
 .back-top {
@@ -2125,21 +2121,7 @@ ul.latest_news li a:focus+span.defaultcolor {
 .back-top:hover {
   background-position: right center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 /*---- OWl / Revolution ----*/
-
-
 /*Dots*/
 
 .owl-dots {
@@ -2344,18 +2326,7 @@ ul.latest_news li a:focus+span.defaultcolor {
 .owl-next {
   right: 0;
 }
-
-
 /*----- OWl / Revolution ends-----*/
-
-
-
-
-
-
-
-
-
 /*scroll bar styling*/
 
 ::-webkit-scrollbar-track {
@@ -2373,8 +2344,4 @@ ul.latest_news li a:focus+span.defaultcolor {
 
 ::-webkit-scrollbar-thumb:hover {
   box-shadow: inset 0 0 100px 20px #3992bf;
-}
-#map{
-  width: 100%;
-  height: 400px;
 }
